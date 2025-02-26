@@ -1,5 +1,6 @@
 import 'dart:typed_data';
 
+import 'package:ai_image_generator/presentation/provider/api_key.dart';
 import 'package:flutter/material.dart';
 import 'package:stability_image_generation/stability_image_generation.dart';
 
@@ -7,7 +8,6 @@ class ImageGeneratorProvider with ChangeNotifier {
   String _query = '';
   Future<Uint8List>? _imageFuture;
   final StabilityAI _ai = StabilityAI();
-  final String apiKey = 'sk-PkDZXg8fLwfxEUYG4BojWUq1gUviitRK7UwO4fRwPPRR1fVc';
   final ImageAIStyle imageAIStyle = ImageAIStyle.digitalPainting;
 
   String get query => _query;
@@ -24,7 +24,7 @@ class ImageGeneratorProvider with ChangeNotifier {
     }
 
     _imageFuture = _ai.generateImage(
-      apiKey: apiKey,
+      apiKey: ApiKey.apiKey,
       imageAIStyle: imageAIStyle,
       prompt: _query,
     );
