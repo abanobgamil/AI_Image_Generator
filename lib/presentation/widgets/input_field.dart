@@ -1,5 +1,7 @@
+import 'package:ai_image_generator/presentation/provider/image_generator_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:provider/provider.dart';
 
 class InputField extends StatelessWidget {
   const InputField({super.key});
@@ -10,6 +12,9 @@ class InputField extends StatelessWidget {
       elevation: 2,
       borderRadius: BorderRadius.circular(30.r),
       child: TextField(
+        onChanged: (value) =>
+            Provider.of<ImageGeneratorProvider>(context, listen: false)
+                .setQuery(value),
         style: TextStyle(color: Colors.black87, fontSize: 16.sp),
         decoration: InputDecoration(
           hintText: 'Describe your image...',
