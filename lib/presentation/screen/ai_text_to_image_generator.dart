@@ -45,7 +45,7 @@ class AiTextToImageGenerator extends StatelessWidget {
                   SizedBox(height: 20.h),
                   const GenerateButton(),
                   SizedBox(height: 30.h),
-                  const ImageSection(),
+                  Expanded(child: const ImageSection()),
                 ],
               ),
             ),
