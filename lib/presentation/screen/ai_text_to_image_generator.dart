@@ -1,3 +1,4 @@
+import 'package:ai_image_generator/presentation/widgets/generate_button.dart';
 import 'package:ai_image_generator/presentation/widgets/input_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -34,6 +35,8 @@ class AiTextToImageGenerator extends StatelessWidget {
                 ),
                 SizedBox(height: 30.h),
                  const InputField(),
+                SizedBox(height: 20.h),
+                const GenerateButton(),
               ],
             ),
           ),
