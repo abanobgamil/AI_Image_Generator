@@ -2,6 +2,7 @@ import 'dart:typed_data';
 import 'package:ai_image_generator/presentation/provider/image_generator_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 
 class ImageSection extends StatelessWidget {
@@ -32,9 +33,7 @@ class ImageSection extends StatelessWidget {
           future: provider.imageFuture,
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
-              return const CircularProgressIndicator(
-                valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
-              );
+              return Lottie.asset('assets/animation/loading_animation.json');
             }
             if (snapshot.hasData) {
               return ClipRRect(
