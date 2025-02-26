@@ -11,7 +11,7 @@ class AiTextToImageGenerator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Provider<ImageGeneratorProvider>(
+    return ChangeNotifierProvider<ImageGeneratorProvider>(
       create: (BuildContext context) {
         return  ImageGeneratorProvider();
       },
