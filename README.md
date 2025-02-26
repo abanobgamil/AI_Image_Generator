@@ -2,6 +2,8 @@
 
 A Flutter application that integrates with [Stability.ai](https://stability.ai/) to generate images using advanced AI algorithms. This app utilizes the Provider package for state management, making it easier to manage and propagate state changes across your application.
 
+https://github.com/user-attachments/assets/ea0fe402-9cfd-4831-94f1-4c423420cb77
+
 ## Features
 
 - **AI-Driven Image Generation:** Uses Stability.ai’s models to convert text prompts into stunning images.
